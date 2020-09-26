@@ -1,14 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppComponent } from './app.component';
+import { VirtualComponent } from './virtual/virtual.component';
+import { DragComponent } from './drag/drag.component';
+import { PaisesComponent } from './paises/paises.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VirtualComponent,
+    DragComponent,
+    PaisesComponent
   ],
   imports: [
-    BrowserModule
+    HttpClientModule,
+    BrowserModule,
+    ScrollingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
